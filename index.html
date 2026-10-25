@@ -166,6 +166,18 @@
   .entry .role{ color:var(--amber-bright); }
   .entry .meta{ color:var(--amber-dim); font-size:13px; margin:0 0 6px; }
 
+  /* collapsible blocks (technical details, weekly log) */
+  details.more{ margin:0 0 10px; }
+  details.more summary{ cursor:pointer; color:var(--amber-faint); list-style:none; }
+  details.more summary::-webkit-details-marker{ display:none; }
+  details.more summary:hover{ color:var(--amber-bright); }
+  details.weekly-log summary{ color:var(--amber-dim); font-weight:bold; }
+  details.more ul{ margin-top:8px; }
+  ul.weekly li::before{ content:""; }
+  ul.weekly li{ padding-left:0; text-indent:0; }
+  .wk{ color:var(--amber-dim); margin-right:8px; }
+  .last-reviewed, .ai-note{ color:var(--amber-faint); font-size:12.5px; margin:4px 0; }
+
   /* skills directory listing */
   .dirlist-row{ margin-bottom:12px; }
   .dirlist-row .perm{ color:var(--amber-faint); margin-right:10px; }
@@ -261,13 +273,32 @@ Mounting /career ... <span class="ok">[OK]</span></pre>
       <div class="entry">
         <div class="role">Software Engineering Intern @ Living Seeds (Sementes Vivas)</div>
         <div class="meta">[2026-09 .. present]</div>
+        <p>I ship fast with an AI-assisted workflow (Claude): I define the problem, validate it with the team and review everything that goes live.</p>
         <ul>
-          <li>Designed, built and deployed an internal management dashboard (Python, Starlette, SQLite) bringing sales, finance and HR data from the company ERP into one web view, with user accounts and role-based permissions controlling which modules each person can see.</li>
-          <li>Automated data refresh with scheduled nightly rebuilds and backups (Windows Task Scheduler, PowerShell) and set up secure remote access through a private VPN (Tailscale) and RDP.</li>
-          <li>Developed a pick-to-light warehouse picking station (Python, Flask): order PDFs are read and shown on operators' tablets, LED-lit bins guide each pick, and several operators work at the same time with colour-coded orders, replacing printed pick lists. Covered by automated tests (pytest).</li>
-          <li>Wrote a data-import script mapping an ERP stock export into a product catalogue, removing duplicates and classifying items by SKU prefix, with the mapping rules validated together with warehouse staff.</li>
-          <li>Gathers requirements directly with management and operations staff, and keeps technical guides and setup checklists so each system can be installed and maintained by others.</li>
+          <li><strong>Warehouse order picking:</strong> from reading paper lists packet by packet, to LED-lit bins driven by a printed PDF, to a real-time system that lights the right bins as soon as an operator starts an order in the company's management platform, with several operators working at once.</li>
+          <li><strong>Order capture:</strong> from filling in every order by hand and importing it one by one, to two experiments (computer vision, then AI reading of handwriting), to a paper-free flow: the salesperson scans each packet's code on a phone, enters the quantity, and the order spreadsheet for export is generated automatically.</li>
+          <li><strong>Internal dashboard:</strong> sales, finance and HR data from the company ERP in one web view, with role-based access and automatic nightly refresh and backups.</li>
         </ul>
+        <details class="more">
+          <summary>[+ technical details]</summary>
+          <ul>
+            <li>Designed, built and deployed an internal management dashboard (Python, Starlette, SQLite) bringing sales, finance and HR data from the company ERP into one web view, with user accounts and role-based permissions controlling which modules each person can see.</li>
+            <li>Automated data refresh with scheduled nightly rebuilds and backups (Windows Task Scheduler, PowerShell) and set up secure remote access through a private VPN (Tailscale) and RDP.</li>
+            <li>Developed a pick-to-light warehouse picking station (Python, Flask): order PDFs are read and shown on operators' tablets, LED-lit bins guide each pick, and several operators work at the same time with colour-coded orders, replacing printed pick lists. Covered by automated tests (pytest).</li>
+            <li>Wrote a data-import script mapping an ERP stock export into a product catalogue, removing duplicates and classifying items by SKU prefix, with the mapping rules validated together with warehouse staff.</li>
+            <li>Gathers requirements directly with management and operations staff, and keeps technical guides and setup checklists so each system can be installed and maintained by others.</li>
+          </ul>
+        </details>
+        <details class="more weekly-log">
+          <summary>$ git log --weekly</summary>
+          <!-- weekly:start -->
+          <ul class="weekly">
+            <li data-week="init"><span class="wk">----</span> The automatic weekly log starts here.</li>
+          </ul>
+          <p class="last-reviewed">Last reviewed: 2026-10-25</p>
+          <!-- weekly:end -->
+          <p class="ai-note">This log is generated automatically from my Git history with generative AI, then reviewed and approved by me before it is published.</p>
+        </details>
       </div>
       <div class="entry">
         <div class="role">Invited Assistant Professor @ IPCB, Polytechnic Institute of Castelo Branco</div>

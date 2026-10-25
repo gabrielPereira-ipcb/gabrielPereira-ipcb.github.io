@@ -73,11 +73,16 @@ Mounting /career ... <span class="ok">[OK]</span></pre>
         </details>
         <p class="weekly-cmd">$ tail -n 3 weekly.log</p>
         <!-- weekly:start -->
-        <ul class="weekly">
-          <li data-week="init"><span class="wk">----</span> The automatic weekly log starts here.</li>
-        </ul>
-        <p class="last-reviewed">Last reviewed: 2026-10-25</p>
-        <!-- weekly:end -->
+<ul class="weekly">
+<li data-week="2026-W43"><span class="wk">2026-W43</span> Order export to the ERP: per-client order numbers, entity code, latest delivered lot and visit date filled in automatically, and several orders from one sender exported in a single file.</li>
+<li data-week="2026-W43"><span class="wk">2026-W43</span> Dashboard: a page for the planning agent's suggestions where owners answer with option buttons, and the interface translated into Portuguese; picking lights now stay on until the order is done, with the selected item blinking.</li>
+<li data-week="2026-W42"><span class="wk">2026-W42</span> Order capture: from a bot that only produced a spreadsheet to a dashboard section where staff check each order against the page photo, correct it and export it in the ERP import format; photos can also be uploaded there.</li>
+<li data-week="2026-W42"><span class="wk">2026-W42</span> Order sheets: from a fixed printed layout to PDFs generated on demand with a QR code and a per-client column set, plus product sheets updated from an uploaded Excel with the pages to reprint flagged.</li>
+<li data-week="2026-W41"><span class="wk">2026-W41</span> Warehouse picking: the station now receives each order's full snapshot from the company management platform and lights the right bins; bin map corrected and new bins added for seed balls.</li>
+<li data-week="2026-W41"><span class="wk">2026-W41</span> Order capture: from sending a whole page photo to the AI, to reading each handwritten field by sheet geometry plus AI, with the chat bot handling sellers and the dashboard managing them.</li>
+</ul>
+<p class="last-reviewed">Last reviewed: 2026-10-25</p>
+<!-- weekly:end -->
         <p class="ai-note">This log is generated automatically from my Git history with generative AI, then reviewed and approved by me before it is published.</p>
       </div>
       <div class="entry">
@@ -197,7 +202,7 @@ Mounting /career ... <span class="ok">[OK]</span></pre>
   </div>
 </div>
 
-<footer><!-- footer:start -->gabriel-os v2026.43 — updated weekly with generative AI from my Git history, reviewed by me<!-- footer:end --></footer>
+<footer><!-- footer:start -->gabriel-os v2026.43 — now: Fixing the order export to the ERP import template (order numbers, visit date, quantities) · updated weekly with generative AI from my Git history, reviewed by me<!-- footer:end --></footer>
 
 <script>
   document.getElementById('login-date').textContent = new Date().toDateString();

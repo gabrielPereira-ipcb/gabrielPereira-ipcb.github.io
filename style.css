@@ -161,10 +161,10 @@ details.more{ margin:0 0 10px; }
 details.more summary{ cursor:pointer; color:var(--amber-faint); list-style:none; }
 details.more summary::-webkit-details-marker{ display:none; }
 details.more summary:hover{ color:var(--amber-bright); }
-details.weekly-log summary{ color:var(--amber-dim); font-weight:bold; }
+.weekly-cmd{ color:var(--amber-dim); font-weight:bold; margin:14px 0 6px; }
 details.more ul{ margin-top:8px; }
-ul.weekly li::before{ content:""; }
-ul.weekly li{ padding-left:0; text-indent:0; }
+ul.weekly li::before, ul.weekly-older li::before{ content:""; }
+ul.weekly li, ul.weekly-older li{ padding-left:0; text-indent:0; }
 .wk{ color:var(--amber-dim); margin-right:8px; }
 .last-reviewed, .ai-note{ color:var(--amber-faint); font-size:12.5px; margin:4px 0; }
 

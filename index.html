@@ -59,8 +59,8 @@ Mounting /career ... <span class="ok">[OK]</span></pre>
         <p>I ship fast with an AI-assisted workflow (Claude): I define the problem, validate it with the team and review everything that goes live.</p>
         <ul>
           <li><strong>Warehouse order picking:</strong> from reading paper lists packet by packet, to LED-lit bins driven by a printed PDF, to a real-time system that lights the right bins as soon as an operator starts an order in the company's management platform, with up to three operators working at once.</li>
-          <li><strong>Order capture:</strong> from filling in every order by hand and importing it one by one, to two experiments (computer vision, then AI reading of handwriting), to a paper-free flow: the salesperson scans each packet's code on a phone, enters the quantity, and the order spreadsheet for export is generated automatically.</li>
-          <li><strong>Internal dashboard:</strong> sales, finance and HR data from the company ERP in one web view, with role-based access and automatic nightly refresh and backups.</li>
+          <li><strong>Order capture (in progress):</strong> from filling in every order by hand and importing it one by one, to two experiments (computer vision, then AI reading of handwriting), to a paper-free flow: the salesperson scans each packet's code, enters the quantity and places the order from a phone or tablet in the field; once complete, no handwritten orders and no manual ERP import.</li>
+          <li><strong>Internal dashboard:</strong> sales, finance and HR data from the company ERP in one web view, with role-based access and automatic nightly refresh and backups; a Marketing view with social media and ad statistics is in progress.</li>
         </ul>
         <details class="more">
           <summary>[+ technical details]</summary>
@@ -74,8 +74,8 @@ Mounting /career ... <span class="ok">[OK]</span></pre>
         <p class="weekly-cmd">$ tail -n 3 weekly.log</p>
         <!-- weekly:start -->
 <ul class="weekly">
-<li data-week="2026-W44"><span class="wk">2026-W44</span> In progress: a Marketing view for the internal dashboard, with read-only connectors for social media and ad statistics (newsletter connector in testing), daily and yearly charts and per-post reach.</li>
-<li data-week="2026-W44"><span class="wk">2026-W44</span> In progress: a tablet app for sales reps to place client orders in the field instead of writing them by hand; once complete, no handwritten orders and no manual ERP import. Already has drafts per client and an outbox that resends unsent orders.</li>
+<li data-week="2026-W44"><span class="wk">2026-W44</span> Built read-only connectors for social media and ad statistics and a Marketing view with daily and yearly charts and per-post reach.</li>
+<li data-week="2026-W44"><span class="wk">2026-W44</span> Added drafts per client and an outbox that automatically resends unsent orders to the tablet order-entry app, so orders are not lost.</li>
 <li data-week="2026-W43"><span class="wk">2026-W43</span> Order export to the ERP: per-client order numbers, entity code, latest delivered lot and visit date filled in automatically, and several orders from one sender exported in a single file.</li>
 <li data-week="2026-W43"><span class="wk">2026-W43</span> Dashboard: users no longer come to me with requests, suggestions or bug reports; a bot receives them, plans, notifies me and implements only after my decision. Interface now in Portuguese; picking lights stay on until the order is done, with the selected item blinking.</li>
 <li data-week="2026-W42"><span class="wk">2026-W42</span> Order capture: from a bot that only produced a spreadsheet to a dashboard section where staff check each order against the page photo, correct it and export it in the ERP import format; photos can also be uploaded there.</li>

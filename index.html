@@ -59,7 +59,7 @@ Mounting /career ... <span class="ok">[OK]</span></pre>
         <p>I ship fast with an AI-assisted workflow (Claude): I define the problem, validate it with the team and review everything that goes live.</p>
         <ul>
           <li><strong>Warehouse order picking:</strong> from reading paper lists packet by packet, to LED-lit bins driven by a printed PDF, to a real-time system that lights the right bins as soon as an operator starts an order in the company's management platform, with up to three operators working at once.</li>
-          <li><strong>Order capture (in progress):</strong> from filling in every order by hand and importing it one by one, to two experiments (computer vision, then AI reading of handwriting), to a paper-free flow: the salesperson scans each packet's code, enters the quantity and places the order from a phone or tablet in the field; once complete, no handwritten orders and no manual ERP import.</li>
+          <li><strong>Order capture (in testing):</strong> from filling in every order by hand and importing it one by one, to two experiments (computer vision, then AI reading of handwriting), to a paper-free flow: the salesperson scans each packet's code, enters the quantity and places the order from a phone or tablet in the field; the system is built and now in testing before rollout, after which there will be no handwritten orders and no manual ERP import.</li>
           <li><strong>Internal dashboard:</strong> sales, finance and HR data from the company ERP in one web view, with role-based access and automatic nightly refresh and backups; a Marketing view with social media and ad statistics is in progress.</li>
         </ul>
         <details class="more">
@@ -74,21 +74,24 @@ Mounting /career ... <span class="ok">[OK]</span></pre>
         <p class="weekly-cmd">$ tail -n 3 weekly.log</p>
         <!-- weekly:start -->
 <ul class="weekly">
+<li data-week="2026-W45"><span class="wk">2026-W45</span> Order capture on the phone: added chain price tables, line and order totals, and an offline quote mode with its own price table and Excel/print export. Added store choice for multi-store clients and client search from the first character.</li>
+<li data-week="2026-W45"><span class="wk">2026-W45</span> Warehouse picking: bin lights now switch off by themselves 48 h after an order is assigned, while the order stays active. The idle mode now shows a Christmas scene with snow, a reindeer and an elf.</li>
 <li data-week="2026-W44"><span class="wk">2026-W44</span> Built read-only connectors for social media and ad statistics and a Marketing view with daily and yearly charts and per-post reach.</li>
 <li data-week="2026-W44"><span class="wk">2026-W44</span> Added drafts per client and an outbox that automatically resends unsent orders to the tablet order-entry app, so orders are not lost.</li>
+<li data-week="2026-W44"><span class="wk">2026-W44</span> Dashboard: added a restricted service account for an automated planning assistant that can write a single status field and nothing else, with the access rules covered by automated tests and documented.</li>
 <li data-week="2026-W43"><span class="wk">2026-W43</span> Order export to the ERP: per-client order numbers, entity code, latest delivered lot and visit date filled in automatically, and several orders from one sender exported in a single file.</li>
 <li data-week="2026-W43"><span class="wk">2026-W43</span> Dashboard: users no longer come to me with requests, suggestions or bug reports; a bot receives them, plans, notifies me and implements only after my decision. Interface now in Portuguese; picking lights stay on until the order is done, with the selected item blinking.</li>
-<li data-week="2026-W42"><span class="wk">2026-W42</span> Order capture: from a bot that only produced a spreadsheet to a dashboard section where staff check each order against the page photo, correct it and export it in the ERP import format; photos can also be uploaded there.</li>
-<li data-week="2026-W42"><span class="wk">2026-W42</span> Order sheets: from a fixed printed layout to PDFs generated on demand with a QR code and a per-client column set, plus product sheets updated from an uploaded Excel with the pages to reprint flagged.</li>
 </ul>
 <details class="more older">
 <summary>[+ older entries]</summary>
 <ul class="weekly-older">
+<li data-week="2026-W42"><span class="wk">2026-W42</span> Order capture: from a bot that only produced a spreadsheet to a dashboard section where staff check each order against the page photo, correct it and export it in the ERP import format; photos can also be uploaded there.</li>
+<li data-week="2026-W42"><span class="wk">2026-W42</span> Order sheets: from a fixed printed layout to PDFs generated on demand with a QR code and a per-client column set, plus product sheets updated from an uploaded Excel with the pages to reprint flagged.</li>
 <li data-week="2026-W41"><span class="wk">2026-W41</span> Warehouse picking: the station now receives each order's full snapshot from the company management platform and lights the right bins; bin map corrected and new bins added for seed balls.</li>
 <li data-week="2026-W41"><span class="wk">2026-W41</span> Order capture: from sending a whole page photo to the AI, to reading each handwritten field by sheet geometry plus AI, with the chat bot handling sellers and the dashboard managing them.</li>
 </ul>
 </details>
-<p class="last-reviewed">Last reviewed: 2026-11-03</p>
+<p class="last-reviewed">Last reviewed: 2026-11-09</p>
 <!-- weekly:end -->
         <p class="ai-note">This log is generated automatically from my Git history with generative AI, then reviewed and approved by me before it is published.</p>
       </div>
@@ -209,7 +212,7 @@ Mounting /career ... <span class="ok">[OK]</span></pre>
   </div>
 </div>
 
-<footer><!-- footer:start -->gabriel-os v2026.44 — updated weekly with generative AI from my Git history, reviewed by me<!-- footer:end --></footer>
+<footer><!-- footer:start -->gabriel-os v2026.45 — updated weekly with generative AI from my Git history, reviewed by me<!-- footer:end --></footer>
 
 <script>
   document.getElementById('login-date').textContent = new Date().toDateString();
